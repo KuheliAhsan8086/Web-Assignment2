@@ -1,0 +1,20 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortune Generator</title>
+</head>
+<body onload="myFunction()"> 
+    <p id="text"></p>
+</body>
+    <script>
+        let showQuotes = document.querySelector('#text')
+        let quotes = ['fuck','you','mf']
+        let random = Math.floor(Math.random() * 4);
+        function myFunction(){
+            showQuotes.innerHTML= quotes[random];
+        }
+    </script>
+</html>

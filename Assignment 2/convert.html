@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert</title>
+</head>
+<body>
+
+    <div class="container" style="text-align: center;">
+        <label for="">BDT</label>
+        <input type="text" id="taka">
+        <button type="submit" id="btn" style="padding: 5px;">BDT</button><br>
+        <label for="">USD</label>
+        <input type="text" id="dollar">
+        <button type="submit" id="btn1">USD</button><br>
+        <label for="">EURO</label>
+        <input type="text" id="euro">
+        <button type="submit" id="btn2">EURO</button><br>
+        <label for="">CAD</label>
+        <input type="text" id="cad">
+        <button type="submit" id="btn3">CAD</button><br>
+        <label for="">INR</label>
+        <input type="text" id="inr">
+        <button type="submit" id="btn4">INR</button><br>
+    </div>
+
+    
+
+
+    <script>
+      let taka= document.getElementById('taka')
+      let dollar= document.getElementById('dollar')
+      let euro= document.getElementById('euro')
+      var b1 = document.getElementById('btn')
+      var b2 = document.getElementById('btn1')
+      var b3 = document.getElementById('btn2')
+      var b4 = document.getElementById('btn3')
+      var b5 = document.getElementById('btn4')
+
+
+       b1.addEventListener('click',(e)=>{
+           e.preventDefault()
+            dollar.value = taka.value/84.86
+            euro.value = taka.value/91.91
+            cad.value = taka.value/64.05
+            inr.value = taka.value/1.12
+         
+       })
+       b2.addEventListener('click',(e)=>{
+           e.preventDefault()
+            taka.value = dollar.value*84.86
+            euro.value = dollar.value/0.96
+            cad.value = dollar.value*1.33
+            inr.value = dollar.value*71.73
+       })
+       b3.addEventListener('click',(e)=>{
+           e.preventDefault()
+            taka.value = euro.value*91.95
+            dollar.value = euro.value*1.18
+            cad.value = euro.value*1.44
+            inr.value = euro.value*77.47
+       })
+       b4.addEventListener('click',(e)=>{
+           e.preventDefault()
+            taka.value = cad.value*64.74
+            dollar.value = cad.value/0.75
+            euro.value = cad.value/0.7
+            inr.value = cad.value*53.98
+       })
+       b5.addEventListener('click',(e)=>{
+           e.preventDefault()
+            taka.value = inr.value*1.18
+            dollar.value = inr.value*0.014
+            euro.value = inr.value*0.013
+            cad.value = inr.value*0.019
+       })
+       
+    </script>
+</body>
+</html>
